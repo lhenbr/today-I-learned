@@ -1,4 +1,4 @@
-#Regex
+# Regex
 A regular expression (Regex) is a sequence of characters that create a pattern. this pattern is used to search for and find a match in strings.
 ##Regex is often used to:
 - validate fields like email, phone number, passwords
