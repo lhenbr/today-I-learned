@@ -30,4 +30,4 @@ A regular expression (Regex) is a sequence of characters that create a pattern. 
 - `new RegExp(pattern,flags)` -> create a regex with the pattern(without //) and flags
 constructor methods:
 - `regexObj.exec(string)` -> return an array with the matchs of the search and update the regex object properties
-- `regexObj.exec(string)` -> if has a match return true, if not, return false
+- `regexObj.test(string)` -> if has a match return true, if not, return false
