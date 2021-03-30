@@ -1,0 +1,1 @@
+A regular expression is a sequence of characters that create a pattern. We can use regular expressions to search for and find these patterns in strings, which enables us to perform complex pattern-matching on strings.
