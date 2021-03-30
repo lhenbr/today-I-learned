@@ -8,7 +8,7 @@ A regular expression (Regex) is a sequence of characters that create a pattern. 
 
 ## Flags:
 - g :global: find all matches in the entire string
-- i -> case insensitive
+- i : case insensitive
 
 ## Special characters:
 - . :wildcard: match anything except the newline character
