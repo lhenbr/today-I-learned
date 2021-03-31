@@ -19,6 +19,15 @@ A regular expression (Regex) is a sequence of characters that create a pattern. 
 - {min,max} : character range: specify the quantity of characters, max can be omitted
 - \ : escape character, to use other special characters in the pattern
  
+ ## Metacharacters:
+ - \d :[0-9] :digit  ->  \D :[^0-9] :non-digit
+ - \n :newline -> \r :carriage return -> \t :tab character
+ - \s :any whitespace character  ->  \S :any non-whitespace character
+ - \w :[A-Za-z0-9_]any alphanumeric character
+ - \W :[^A-Za-z0-9_] any non-alphanumeric character
+
+## Special Characters:
+- \^
  ## Methods:
 - `str.match(patern)` :return an array with the matches or null
 - `str.replace(pattern,replaceText)` :replace the pattern with replace text
