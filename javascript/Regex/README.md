@@ -27,7 +27,10 @@ A regular expression (Regex) is a sequence of characters that create a pattern. 
  - \W :[^A-Za-z0-9_] any non-alphanumeric character
 
 ## Special Characters:
-- \^
+- ^ :starting `"this is great".match(/^t.*/) // ["this is great"]`
+- $ :ending `"first.test.js".match(/.*\.test.js$/) // ["first.test.js"]`
+- [^] :excluding `"let's get rid of everything that is not a vowel".replace(/[^aeiou]/gi,'') // "eeioeeiaioaoe"`
+- | :or `"banana bread".match('bread|pancakes$') // ["bread"]`
  ## Methods:
 - `str.match(patern)` :return an array with the matches or null
 - `str.replace(pattern,replaceText)` :replace the pattern with replace text
