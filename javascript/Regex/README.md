@@ -31,13 +31,13 @@ A regular expression (Regex) is a sequence of characters that create a pattern. 
 - $ :ending `"first.test.js".match(/.*\.test.js$/) // ["first.test.js"]`
 - [^] :excluding `"let's get rid of everything that is not a vowel".replace(/[^aeiou]/gi,'') // "eeioeeiaioaoe"`
 - | :or `"banana bread".match('bread|pancakes$') // ["bread"]`
+- \b :word boundaries, matches the boundary between a word and a non-word character
+- () :groupings, search and create groups witch you can later access, `$1`, `$2`..., don't count on replace.
  ## Methods:
 - `str.match(patern)` :return an array with the matches or null
 - `str.replace(pattern,replaceText)` :replace the pattern with replace text
 - `str.search(pattern)` :return the first starting point(index) of where a match is found or -1
 - `str.split(pattern or string)` :split the str using a pattern or string  like delimiter
-- \b :word boundaries, matches the boundary between a word and a non-word character
-- () :groupings, create groups witch you can later access, `$1`, `$2`...
 
 
 ## Constructor:

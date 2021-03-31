@@ -42,3 +42,18 @@ function remove(s) {
     let pattern = /(\b)!+/g;
     return s.replace(pattern, "")
 }
+
+/*Validate all numbers to make local calls from the capital city at the Mexican United States.
+The first two digits are the lada. Lada can only be 55 or 56 for those Mexico City phone numbers.
+ */
+var isValidMXPhoneNumber = function (str) {
+    let pattern = /^\(*[55,56]\)*[\d ]/;
+    return pattern.test(str);
+};
+/*Implement String#ipv4_address?, which should return true if given object is an IPv4 address - four numbers (0-255) separated by dots.
+It should only accept addresses in canonical representation, so no leading 0s, spaces etc. 
+https://www.codewars.com/kata/567fe8b50c201947bc000056/train/javascript*/
+String.prototype.ipv4Address = function () {
+    let pattern = /[0,9]{0,2}.[0,9]{0,2}.[0,9]{0,2}.[0,9]{0,2}/
+    return pattern.test(this);
+}
