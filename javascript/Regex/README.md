@@ -36,6 +36,8 @@ A regular expression (Regex) is a sequence of characters that create a pattern. 
 - `str.replace(pattern,replaceText)` :replace the pattern with replace text
 - `str.search(pattern)` :return the first starting point(index) of where a match is found or -1
 - `str.split(pattern or string)` :split the str using a pattern or string  like delimiter
+- \b :word boundaries, matches the boundary between a word and a non-word character
+- () :groupings, create groups witch you can later access, `$1`, `$2`...
 
 
 ## Constructor:
