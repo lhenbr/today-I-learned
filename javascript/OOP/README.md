@@ -16,7 +16,7 @@
   3.  change the subtype constructor to its own constructor `subtype.prototype.constructor = subtype`
   4.  add Methods after Inheritance `subtype.prototype.method = ()=>{...}`
    Ex: 
-   ```
+```
    function Animal() { }
 Animal.prototype.eat = function() {
   console.log("nom nom nom");
@@ -26,8 +26,8 @@ Bird.prototype = Object.create(Animal.prototype);
 Bird.prototype.constructor = Bird;
 Bird.prototype.fly = function() {
   console.log("I'm flying!");
-};
-    ```
+};  
+```
 ### To override inherited methods you just replace then
 
 ## Mixins
@@ -40,7 +40,7 @@ Bird.prototype.fly = function() {
 - immediately invoked functions `(()=>{..})();` is often used to group related functionality into a single object or module.
 - you will use the IFEE to return immediately an object with the methods of your module
 Ex: the fuctions 
- ```
+```
 function glideMixin(obj) {
   obj.glide = function() {
     console.log("Gliding on the water");
@@ -51,4 +51,4 @@ function flyMixin(obj) {
     console.log("Flying, wooosh!");
   };
 }
- ```
+```
