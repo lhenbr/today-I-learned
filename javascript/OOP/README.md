@@ -28,12 +28,12 @@ Bird.prototype.fly = function() {
   console.log("I'm flying!");
 };  
 ```
-### To override inherited methods you just replace then
+##### To override inherited methods you just replace then
 
 ## Mixins
 - functions to add common behavior (methods) Between Unrelated Objects
 
-## Closure (emcapsulation)
+## Closure (encapsulation)
 - inside the constructor fuution, instead of delaring a property `this.xxx` you can declara a variable `let xxx`, thus the variable is avaible only for methods inside the constructor (getter and setters for example)
 
 ## IFEE and Modules
@@ -51,4 +51,21 @@ function flyMixin(obj) {
     console.log("Flying, wooosh!");
   };
 }
+```
+Will be this in module format
+```
+let motionModule = (function () {
+  return {
+    glideMixin: function(obj) {
+      obj.glide = function() {
+        console.log("Gliding on the water");
+      };
+    },
+    flyMixin: function(obj) {
+      obj.fly = function() {
+        console.log("Flying, wooosh!");
+      };
+    }
+  }
+})();
 ```
