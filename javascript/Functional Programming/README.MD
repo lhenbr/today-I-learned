@@ -33,4 +33,6 @@ When a pure function is called many times with the same input, it will always gi
 #### in functional programming, changing or altering things is called mutation, and the outcome is called a side effect. A function, ideally, should be a pure function, meaning that it does not cause any side effects.
 
 ## Functions 
-- Map: `arr.map(callback(value,index,array), thisArg)` The map method iterates over each item in an array and returns a new array containing the results of calling the callback function on each element. It does this without mutating the original array. 
+- Map: `arr.prototype.map(callback(value,index,array), thisArg)` The map method iterates over each item in an array and returns a new array containing the results of calling the callback function on each element. It does this without mutating the original array. 
+- Filter: `arr.prototype.filter(callback(value, index, array),thisArg)` The filter method calls a function on each element of an array and returns a new array containing only the elements for which that function returns true.
+- Reduce `arr.prototype.reduce(callback(acc,current,index, arr), initialValue)` The reduce method iterates over each item in an array and returns a single value (i.e. string, number, object, array). This is achieved via a callback function that is called on each iteration.
