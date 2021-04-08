@@ -8,7 +8,7 @@ When a pure function is called many times with the same input, it will always gi
  functions that make use variables defined in outer functions that have previously returned.
 
  ## Currying
- Currying is the process of breaking down a function that takes multiple arguments into a series of functions that take some subset of the arguments. 
+ Currying is the process of breaking down a function that takes multiple arguments into a series of functions that take some subset of the arguments. This is useful in your program if you can't supply all the arguments to a function at one time. You can save each function call into a variable, which will hold the returned function reference that takes the next argument when it's available.
 
  ## Composition
  Very commonly, currying is used to combine two or more functions to produce a new function. We call this process of combining functions "composition."
@@ -36,3 +36,6 @@ When a pure function is called many times with the same input, it will always gi
 - Map: `arr.prototype.map(callback(value,index,array), thisArg)` The map method iterates over each item in an array and returns a new array containing the results of calling the callback function on each element. It does this without mutating the original array. 
 - Filter: `arr.prototype.filter(callback(value, index, array),thisArg)` The filter method calls a function on each element of an array and returns a new array containing only the elements for which that function returns true.
 - Reduce `arr.prototype.reduce(callback(acc,current,index, arr), initialValue)` The reduce method iterates over each item in an array and returns a single value (i.e. string, number, object, array). This is achieved via a callback function that is called on each iteration.
+- Every `arr.prottype.every(callback(curr, index, arr), thisArg)` The every method works with arrays to check if every element passes a particular test. It returns true if all values meet the criteria, false if not.
+- Some `arr.prototype.some(callback(curr, index, arr), thisArg)` The some method works with arrays to check if any element passes a particular test. It returns true if any of the values meet the criteria, false if not.
+-- ForEach `arr.prototype.forEach(callback(curr,index,arr),thisArg)` ForEach method just run the function on every element in the list, no return value
