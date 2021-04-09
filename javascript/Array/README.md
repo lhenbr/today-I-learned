@@ -10,3 +10,4 @@
     - compareFn(a,b) > 0, b will come before
 - `arr.prototype.split(delimiter)`The split method splits a string into an array of strings. It takes an argument for the delimiter, which can be a character to use to break up the string or a regular expression.
 - `arr.protptype.join(delimiter)` The join method is used to join the elements of an array together to create a string. It takes an argument for the delimiter that is used to separate the array elements in the string.
+-`arr.prototype.flat(depth)` the flat method that creates a new array with all the elements of the subarrays concatenated to it recursively up to a specified depth.

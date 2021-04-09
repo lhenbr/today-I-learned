@@ -167,3 +167,16 @@ function pairElement(str) {
    }
    
    pairElement("GCG");
+   /**Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities. */
+   function convertHTML(str) {
+    const HTMLTable = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      '\'':'&apos;'
+    }
+    return str.replace(/[&<>\"']/g,match => HTMLTable[match])
+  }
+  
+  convertHTML("Dolce & Gabbana");

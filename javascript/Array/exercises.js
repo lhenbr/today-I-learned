@@ -36,3 +36,17 @@ function chunkArrayInGroups(arr, size) {
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
+/**Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays.
+
+In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array.
+
+The unique numbers should be sorted by their original order, but the final array should not be sorted in numerical order.
+
+ */
+function uniteUnique(...arr) {
+    let concatArr  = arr.flat();
+    return concatArr.filter((cur,index)=> concatArr.indexOf(cur)===index);
+    }
+      
+    
+    console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
