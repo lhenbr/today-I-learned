@@ -11,7 +11,7 @@ A regular expression (Regex) is a sequence of characters that create a pattern. 
 - i : case insensitive
 
 ## Special characters:
-- . :wildcard: match anything except the newline character
+- .  :wildcard: match anything except the newline character
 - [a-z] :character set: specify multiples characters to the same position([a-z] = from a to z)
 - ? : marks the previous match as optional
 - \+ : match one or more of the previous match
@@ -38,10 +38,14 @@ A regular expression (Regex) is a sequence of characters that create a pattern. 
 - `str.replace(pattern,replaceText)` :replace the pattern with replace text
 - `str.search(pattern)` :return the first starting point(index) of where a match is found or -1
 - `str.split(pattern or string)` :split the str using a pattern or string  like delimiter
+- `regexObj.exec(string)` :return an array with the matchs of the search and update the regex object properties
+- `regexObj.test(string)` :if has a match return true, if not, return false
 
 
 ## Constructor:
 - `new RegExp(pattern,flags)` :create a regex with the pattern(without //) and flags
 constructor methods:
-- `regexObj.exec(string)` :return an array with the matchs of the search and update the regex object properties
-- `regexObj.test(string)` :if has a match return true, if not, return false
+
+## Patterns
+-`(?=...)` Positive lookahead,will match something followed by something else. EX: `q(?=u)` matches a q that is followed by a u
+-`(?!...)` Negative lookahead, will match something not followed by something else. Ex: `q(?!u)` matches a q that is not followed by a u

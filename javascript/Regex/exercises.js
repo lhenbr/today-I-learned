@@ -57,3 +57,113 @@ String.prototype.ipv4Address = function () {
     let pattern = /[0,9]{0,2}.[0,9]{0,2}.[0,9]{0,2}.[0,9]{0,2}/
     return pattern.test(this);
 }
+/*from rithmschool.comn
+Write a function called capitalSentence which accepts a string and returns another 
+string with all the capital letters joined together.
+*/
+
+function capitalSentence(str) {
+    let pattern = /[A-Z]/g
+
+    return str.match(pattern).join("")
+}
+console.log(capitalSentence("The Cat In The Hat")) // "TCITH"
+console.log(capitalSentence("And I Think to Myself What a Wonderful World")) // "AITMWWW"
+//from rithmschool.com
+/*Write a function called countNumbers which accepts a string of 
+numbersand returns the count of numbers between 0 and 9.*/
+
+function countNumbers(str) {
+    let pattern = /[0-9]/g
+    result = str.match(pattern);
+    return result ? result.length : 0;
+}
+
+
+console.log(countNumbers("321321dsadsa930-29d132b13a"))// 16
+console.log(countNumbers("this is so wonderful")) // 0
+console.log(countNumbers("this is so 1234")) // 4
+/*Write a function caled isValidPassword, which accepts a string. If the 
+string is longer than 7 characters and includes at least one special 
+character (!,@,#, or $) , the function should return true. Otherwise, return false*/
+function isValidPassword(str) {
+    let pattern = /(?=.*[!,@,#,$])(?=.{8})/;
+    return pattern.test(str)
+
+}
+
+console.log(isValidPassword('TacoCat')) // false
+console.log(isValidPassword('foo')) // false
+console.log(isValidPassword('awesome!')) // true
+console.log(isValidPassword('win!@')) // false)
+/*this function receives an array and convert it to TitleCAse
+exercise from freecodecamp.org */
+function titleCase(str) {
+    return str.toLowerCase().replace(/(^|\s)\S/g, L => L.toUpperCase());
+}
+
+console.log(titleCase("I'm a little tea pot"));
+
+/**Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+
+ */
+ function spinalCase(str) {
+    return str
+     .split(/\W|_|(?=[A-Z])/)
+     .join("-")
+     .toLowerCase();
+ }
+ 
+ spinalCase('This Is Spinal Tap');
+/**Pig Latin is a way of altering English Words. The rules are as follows:
+
+- If a word begins with a consonant, take the first consonant or consonant cluster, move it to the end of the word, and add ay to it.
+
+- If a word begins with a vowel, just add way at the end. */
+
+ function translatePigLatin(str) {
+    return str.replace(/^[aeiou]\w*/, "$&way")
+    .replace(/(^[^aeiou]+)(\w*)/, "$2$1ay")
+    }
+    
+    console.log(translatePigLatin("consonant"));
+    /**Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+
+First argument is the sentence to perform the search and replace on.
+
+Second argument is the word that you will be replacing (before).
+
+Third argument is what you will be replacing the second argument with (after).
+
+Note: Preserve the case of the first character in the original word when you are replacing it. For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
+
+ */
+function myReplace(str, before, after) {
+    let upperCasePattern = /^[A-Z]/
+    after = upperCasePattern.test(before)
+    ? after[0].toUpperCase()+after.slice(1)
+    :after[0].toLowerCase()+after.slice(1)
+    return str.replace(before, after);
+  }
+  
+  myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+  /**The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
+
+Base pairs are a pair of AT and CG. Match the missing element to the provided character.
+
+Return the provided character as the first element in each array.
+
+For example, for the input GCG, return [["G", "C"], ["C","G"], ["G", "C"]]
+
+The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array. */
+function pairElement(str) {
+    var pairs = {
+      A:'T',
+      T:'A',
+      C:'G',
+      G:'C'
+    }
+    return str.split("").map(e=> [e,pairs[e]])
+   }
+   
+   pairElement("GCG");
